@@ -1,0 +1,14 @@
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.navBar {
+  display: flex;
+  color: aliceblue;
+  background-color: rgb(33, 30, 69);
+  padding: 1rem;
+}

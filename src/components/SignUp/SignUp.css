@@ -1,0 +1,36 @@
+.signUp {
+  background-color: rgba(140, 203, 255, 0.438);
+  margin-top: 1rem;
+  border-radius: 10px;
+  margin-right: 10rem;
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.signUp input {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp div {
+  display: flex;
+  flex-direction: row;
+}
+
+.signUp button {
+  width: 7rem;
+  height: 2rem;
+  margin: 1rem;
+  border: 0px;
+  background-color: rgb(255, 243, 112);
+  cursor: pointer;
+}
+
+.oldUser {
+  justify-content: end;
+  align-items: center;
+}
