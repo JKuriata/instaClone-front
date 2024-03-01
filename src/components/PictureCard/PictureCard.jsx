@@ -6,24 +6,26 @@ const PictureCard = () => {
   const [picData, setPicData] = useState(null);
 
   useEffect(() => {
-    const getAllPics = async () => {
+    const getRandomPic = async () => {
       try {
         const response = await fetch(
-          "https://api.unsplash.com/photos/?page=1&client_id=gCi9iiHRqctmlXkBeXSQ845fnkaLc5bPM0GkQseh4DM"
+          "https://api.unsplash.com/photos/?client_id=gCi9iiHRqctmlXkBeXSQ845fnkaLc5bPM0GkQseh4DM"
         );
         if (!response.ok) {
           throw new Error("Something's not right...");
         }
         const data = await response.json();
-        // Set only the first picture from the data array
-        setPicData(data[0]);
+        // Generate a random index within the length of the data array
+        const randomIndex = Math.floor(Math.random() * data.length);
+        // Set the picture data using the random index
+        setPicData(data[randomIndex]);
       } catch (error) {
         console.log(error);
         setErrorMsg(error.message);
       }
     };
 
-    getAllPics();
+    getRandomPic();
   }, []);
 
   return (

@@ -12,3 +12,9 @@ body {
   background-color: rgb(33, 30, 69);
   padding: 1rem;
 }
+
+.pictureCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

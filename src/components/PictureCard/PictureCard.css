@@ -1,15 +1,18 @@
 .pictureCard {
-  margin: 1rem;
-  width: 20rem;
-  padding: 1rem;
-  border: 1px solid #bfbfbf;
-  background-color: white;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: red;
+  margin: 0.5rem;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .pictureCard img {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  width: 90%;
+    overflow: hidden;
 }
+
+.pictureCard:hover img {
+    transform: scale(150%);
+}
+

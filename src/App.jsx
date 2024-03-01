@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import PictureCard from "./components/PictureCard/PictureCard";
-
-import SignUp from "./components/SignUp/SignUp"
-// import PictureCard from "./components/PictureCard/PictureCard"
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
+  // Generate an array with 10 elements to use in the loop
+  const cardArray = Array.from({ length: 12 });
 
-  
-    
   return (
     <>
       <div className="navBar">
@@ -17,10 +15,12 @@ function App() {
 
       <SignUp />
 
-      <getAllPics />
-
-      <PictureCard />
-      <PictureCard />
+      {/* Use map to loop over the array and render PictureCard component 10 times */}
+      <div className="pictureCardContainer">
+        {cardArray.map((_, index) => (
+          <PictureCard key={index} />
+        ))}
+      </div>
     </>
   );
 }
